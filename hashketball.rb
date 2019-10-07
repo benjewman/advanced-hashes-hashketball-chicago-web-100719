@@ -1,3 +1,5 @@
+require "pry"
+
 def game_hash
   the_hash = {
     :home => {
@@ -148,6 +150,7 @@ end
 def player_numbers(team_name)
   array = []
   game_hash.each do |location, attributes|
+    binding.pry 
     if game_hash[location][:team_name] == team_name
       attributes.each do |attribute, info|
         if attribute == :players 
